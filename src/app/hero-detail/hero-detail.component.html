@@ -1,0 +1,12 @@
+<form [formGroup]='heroForm'>
+    <div *ngIf='hero'>
+        <h2>{{hero.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{hero.id}}</div>
+        <div>
+            <label>name:
+                  <input type="text" formControlName="name" placeholder="{{hero.name}}">
+          </label>
+        </div>
+    </div>
+    <button (click)="goBack()">go back</button>
+</form>
